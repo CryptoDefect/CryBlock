@@ -1,0 +1,469 @@
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  /* width: 100vw; */
+  background: black;
+  overflow: auto;
+  scroll-padding-top: 90px; /* 根据固定元素的高度调整 */
+
+}
+
+.header {
+  height: 90px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header-center-item {
+  color: #fff;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-center-item:hover {
+  color: yellow; /* 点击后变成黄色 */
+}
+
+.content-1 {
+  padding: 50px 30px;
+  background-color: transparent;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 47px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.content-1 > div {
+  color: #fff;
+  width: 100%;
+  background-color: #020106;
+  padding: 30px 0;
+}
+
+.highlight {
+  color: #e7ba71; /* 你可以使用content类的颜色，也可以自定义颜色 */
+}
+
+
+.content-2 {
+  color: #fff;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+
+.content-3 {
+  padding: 0 120px;
+  padding-top: 50px;
+  background-color: transparent;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 35px;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+}
+
+.content-3 > div {
+  color: #fff;
+  width: 100%;
+  background-color: transparent;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content-3-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; 
+}
+
+.content-3-item.first-item {
+  margin-right: 70px; 
+}
+
+.content-3-item.second-item {
+  margin-right: 50px; 
+}
+
+.content-3-top {
+  color: #7882ef;
+  font-size: 36px;
+  font-weight: bold; 
+}
+
+.content-3-bottom {
+  font-size: 20px;
+  white-space: nowrap; /* 阻止换行 */
+  text-align: center;
+}
+
+.line1 {
+  width: 680px;
+  height: 30px;
+  margin: 00 auto;
+  border: 2px solid #fff;
+  border-bottom: unset;
+  margin-bottom: -65px;
+}
+
+.line2 {
+  margin: 0 auto;
+  width: 1px;
+  height: 30px;
+  border-left: 2px solid #fff;
+  margin-top: 10px;
+}
+
+.content-4 {
+  padding: 10px 30px;
+  background-color: transparent;
+  max-width: 1050px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 35px;
+  box-sizing: border-box;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.content-4-title {
+  width: 450px;
+  line-height: 80px;
+  background-color: black;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.content-4-text {
+  /* width: 200px; */
+  background-color: black;
+  font-size: 19px;
+  padding: 10px 20px;
+}
+
+.content-5 {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content-5-title {
+  font-size: 35px;
+  margin-top: 30px;
+}
+
+.content-6-title {
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  margin-top: 50px;
+}
+
+.content-6-box {
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+.custom-box {
+  width: 300px; /* 宽度 */
+  height: 180px; /* 高度 */
+  background-color: rgba(255, 255, 255, 0.1); /* 半透明背景 */
+  text-align: center; /* 文本居中 */
+  color: white; /* 字体颜色 */
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-direction: column; /* 列方向排列子元素 */
+  justify-content: center; /* 垂直居中子元素 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  transition: transform 0.3s; /* 动画过渡效果 */
+  background-size: cover; /* 保持原始比例并完全显示 */
+  background-repeat: no-repeat; /* 防止背景图重复 */
+  background-position: center; /* 居中显示背景图 */
+  cursor: pointer;
+}
+.custom-box:hover {
+  transform: scale(1.05);
+}
+
+.content-6-box-title {
+  font-size: 20px;
+  color: #fff;
+}
+
+.dynamic-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #020106, #0b041e, #070111, #060210);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientAnimation 15s ease infinite;
+}
+.custom-textarea {
+  margin-bottom: 10px; /* 底部边距 */
+  border-radius: 4px; /* 圆角边框 */
+  background-color: transparent; /* 背景透明 */
+  border: 1px solid white; /* 白色边框 */
+  color: white; /* 字体颜色 */
+  height: 40px; /* 输入框高度 */
+  display: flex; /* 使用 flex 布局 */
+  align-items: center; /* 垂直居中 */
+  width: calc(100% - 150px); /* 调整宽度以给按钮留出空间 */
+  flex-grow: 1; /* 输入框自适应剩余空间 */
+}
+
+.custom-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* 将 placeholder 文字颜色设置为浅白色 */
+}
+
+.custom-textarea:hover {
+  color: #fff !important;
+  border-color: #fff !important;
+  background: black !important;
+}
+
+.custom-textarea:focus {
+  border-color: white; /* 保持边框颜色为白色 */
+  background-color: black; /* 保持背景透明 */
+  color: white; /* 保持文字颜色为白色 */
+}
+
+
+.sixtyfour-convergence {
+  font-family: "Sixtyfour Convergence", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0, "XELA" 0, "YELA" 0;
+}
+
+.playwrite-gb-s {
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.contact-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* 半透明背景 */
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+.contact-button:hover {
+  transform: scale(1.05); /* 放大5% */
+  transition: transform 0.3s ease-in-out; /* 平滑动画效果 */
+}
+
+.custom-btn {
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+  position: absolute; /* 使按钮绝对定位 */
+  bottom: 170px; /* 距离底部 170px */
+  left: 65px; /* 从 Sider 的左侧开始 */
+  right: 75px; /* 距离代码框右侧的边距 */
+  margin-bottom: 10px; /* 底部边距 */
+  background-color: transparent; /* 背景透明 */
+  border-color: white; /* 按钮边框为白色 */
+  color: white; /* 按钮文字为白色 */
+  height: 50px; /* 设置按钮高度 */
+}
+
+.custom-btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.custom-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.custom-btn:hover:before {
+  left: 100%;
+}
+
+/* CSS 部分 */
+
+#shiny-shadow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #1c2541;
+}
+
+.shiny-button {
+  background: transparent;
+  background-color: transparent; /* 背景透明 */
+  text-transform: uppercase;
+  color: white;
+  padding: 15px 50px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  margin-top: -10px; /* 上边距 */
+  margin-left: 35px; /* 按钮与输入框间距 */
+  border-radius: 4px; /* 圆角边框 */
+  border: 1px solid white; /* 白色边框 */
+  height: 40px; /* 按钮高度 */
+  width: 100px; /* 与输入框保持对称 */
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.shiny-button span {
+  z-index: 20;
+}
+
+.shiny-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -36px;
+  left: -100px;
+  background: white;
+  width: 50px;
+  height: 125px;
+  opacity: 0.2;
+  transform: rotate(-45deg);
+}
+
+.shiny-button:hover {
+  color: #fff !important;
+  border-color: #fff !important;
+  background: black !important;
+}
+
+.shiny-button:hover:after {
+  left: 120%;
+  transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
+  -webkit-transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
+  
+}
+
+/* 确保 canvas 覆盖整个背景区域 */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* 确保 canvas 在最底层 */
+  background-color: #1c2541; /* 你可以调整背景色 */
+}
+
+
+.bottom-button {
+  margin: 0 auto !important;
+  background: black;
+  margin-top: 20px !important;
+  color: #fff;
+  height: 40px !important;
+  overflow: hidden;
+  
+}
+
+.bottom-button:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  border: 1px solid rgb(146, 148, 248);
+  color: #fff !important;
+  border-color: #fff !important;
+  background: black !important;
+}
+
+.custom-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.custom-btn:hover:before {
+  left: 100%;
+}
+
+
+:where(.css-dev-only-do-not-override-vryruh).ant-input-outlined {
+  background: black;
+}
+:where(.css-dev-only-do-not-override-vryruh).ant-input-outlined:focus,
+:where(.css-dev-only-do-not-override-vryruh).ant-input-outlined:hover,
+:where(.css-dev-only-do-not-override-vryruh).ant-input-outlined:focus-within {
+  background: black;
+
+  border-color: #fff;
+}
+
+:where(.css-dev-only-do-not-override-vryruh).ant-btn-variant-outlined:not(
+    :disabled
+  ):not(.ant-btn-disabled):active,
+:where(.css-dev-only-do-not-override-vryruh).ant-btn-variant-dashed:not(
+    :disabled
+  ):not(.ant-btn-disabled):active {
+    color: #fff;
+    border-color: #fff;
+    background: black;
+}
+
+
